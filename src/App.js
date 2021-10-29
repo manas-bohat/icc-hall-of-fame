@@ -2,9 +2,11 @@ import React from 'react';
 import CardList from './CardList';
 import {robots} from './robots';
 import SearchBox from './SearchBox';
+// import Scroll from './Scroll'
 import './Cards.css'
 import './index.css'
 import './App.css'
+import ErrorBoundary from './ErrorBoundary'
 
 class App extends React.Component {
 
@@ -42,9 +44,12 @@ class App extends React.Component {
 	render() {
 		return (
 			<div className="tc">
-				<h1 className="f1"> ROBOFRIENDS </h1>
+				<h1 className="f1"> ICC Hall of Fame </h1>
+				<p> All cricketers in the ICC Hall of Fame who have played in the 21st century</p>
 				<SearchBox searchChange = {this.onSearchChange} />
-				<CardList robots={this.state.robots}/>
+					<ErrorBoundary>
+						<CardList robots={this.state.robots}/>
+					</ErrorBoundary>
 			</div>
 		);
 	}

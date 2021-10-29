@@ -15,3 +15,11 @@ input[type="search"] {
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+a {
+	color: rgba(0,128,128,1);
+	text-decoration: none;
+}
+
+img {
+	margin: 0px;
+}
